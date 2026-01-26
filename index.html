@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>KasbTJ</title>
-  <style>
+
+<style>
 body {
   font-family: Arial, sans-serif;
   background: #f3f4f6;
@@ -14,89 +15,46 @@ body {
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-h1 {
-  text-align: center;
-  color: #1e88e5;
+.job { display:none; }
+.job.active { display:block; }
+
+.job-btn{
+  padding:8px 12px;
+  margin:5px;
+  border:none;
+  background:#1e88e5;
+  color:white;
+  border-radius:6px;
 }
 
-h2 {
-  color: #333;
-} 
-    nav {
-  background: #1e88e5;
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 15px;
-  border-radius: 10px;
+nav {
+  background:#1e88e5;
+  padding:10px;
+  text-align:center;
+  border-radius:10px;
+  margin-bottom:15px;
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-    }
-
-button {
-  background: #1e88e5;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
 }
-<a href="#home">Асосӣ</a>
-<a href="#jobs">Касбҳо</a>
+</style>
+</head>
+
+<body>
+
+<nav>
+<button class="job-btn" onclick="showJob('loader')">🚜 Погрузчик</button>
+<button class="job-btn" onclick="showJob('electric')">⚡ Электрик</button>
 <a href="https://t.me/kasb_tj">Тамос</a>
 </nav>
+
 <div class="card">
 
-<h1 id="home">KasbTJ</h1>
-<p>Омӯзиши касбҳои амалӣ</p>
-
-<div id="loader" class="job active">
-<h2 id="jobs">🚜 Ронандаи погрузчик</h2>
-</div>
-
-<div id="electric" class="job">
-<h2>⚡ Электрик</h2>
-<p>
-Электрик бо шабакаҳои барқӣ, таҷҳизоти равшанӣ ва таъмини қувва кор мекунад.
-</p>
-
-<h3>Вазифаҳо</h3>
-<ul>
-<li>Кашидани сим</li>
-<li>Монтажи розетка ва лампа</li>
-<li>Таъмири вайроншавии барқ</li>
-<li>Риояи техникаи бехатарӣ</li>
-</ul>
-
-<h3>Маош (тахмин)</h3>
-<p>Тоҷикистон: 2500–5000 сомонӣ</p>
-
-
-
-<h3>Дарсҳо</h3>
-<ul>
-<li>Бехатарӣ</li>
-<li>Идоракунӣ</li>
-<li>Борбардорӣ</li>
-<li>Хизматрасонӣ</li>
-</ul>
-</div>
-<a href="https://t.me/kasb_tj" target="_blank">
-  <button>Сабти ном</button>
-</a>
-<p>© KasbTJ 2026</p>
-</div>
-    <script>
-function showJob(id){
-document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-}
-</script>
-</body>
-  </html>
+<h1>KasbTJ</h1>
+<p>Омӯзиши
