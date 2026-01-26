@@ -9,60 +9,83 @@ body{font-family:Arial;background:#f3f4f6;padding:15px}
 .card{background:white;padding:20px;border-radius:12px}
 .job{display:none}
 .job.active{display:block}
-button{background:#1e88e5;color:white;border:none;padding:8px 12px;border-radius:6px;margin:4px}
-nav{text-align:center;margin-bottom:10px}
+
+button{
+background:#1e88e5;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+margin:5px;
+}
+
+#list{display:none}
 </style>
 </head>
 
 <body>
-
-<nav>
-<button onclick="show('j1')">🚜 Погрузчик</button>
-<button onclick="show('j2')">⚡ Электрик</button>
-<button onclick="show('j3')">🧱 Усто</button>
-<button onclick="show('j4')">🚗 Механик</button>
-<button onclick="show('j5')">🔧 Слесарь</button>
-<button onclick="show('j6')">🏗 Крановщик</button>
-<button onclick="show('j7')">🪚 Челонгар</button>
-<button onclick="show('j8')">🎨 Рангубор</button>
-<button onclick="show('j9')">🚿 Сантехник</button>
-<button onclick="show('j10')">🧹 Тозакун</button>
-</nav>
 
 <div class="card">
 
 <h1>KasbTJ</h1>
 <p>Омӯзиши касбҳои амалӣ</p>
 
+<button onclick="toggle()">📋 Рӯйхати касбҳо</button>
+
+<div id="list">
+
+<button onclick="show('j1')">🚜 Погрузчик</button>
+<button onclick="show('j2')">⚡ Электрик</button>
+<button onclick="show('j3')">🧱 Усто</button>
+<button onclick="show('j4')">🚗 Механик</button>
+<button onclick="show('j5')">🔧 Слесарь</button>
+<button onclick="show('j6')">🏗 Крановщик</button>
+<button onclick="show('j7')">🎨 Рангубор</button>
+<button onclick="show('j8')">🚿 Сантехник</button>
+<button onclick="show('j9')">🪚 Челонгар</button>
+<button onclick="show('j10')">🧹 Тозакун</button>
+
+</div>
+
+<hr>
+
 <div id="j1" class="job active">
 <h2>🚜 Ронандаи погрузчик</h2>
-<p>Кор бо техникаи борбардор.</p>
-<p>Маош: 3000–6000 сомонӣ</p>
+<p>Кор бо техникаи борбардор</p>
+<p>Маош: 3000–6000</p>
 </div>
 
 <div id="j2" class="job">
 <h2>⚡ Электрик</h2>
-<p>Насби сим, розетка, лампа.</p>
+<p>Сим, розетка, лампа</p>
 <p>Маош: 2500–5000</p>
 </div>
 
-<div id="j3" class="job"><h2>🧱 Усто</h2><p>Сохтмон</p><p>3000–6000</p></div>
-<div id="j4" class="job"><h2>🚗 Механик</h2><p>Таъмири мошин</p><p>3500–7000</p></div>
-<div id="j5" class="job"><h2>🔧 Слесарь</h2><p>Таъмири металл</p><p>3000–5000</p></div>
-<div id="j6" class="job"><h2>🏗 Крановщик</h2><p>Крани борбардор</p><p>4000–8000</p></div>
-<div id="j7" class="job"><h2>🪚 Челонгар</h2><p>Кор бо чуб</p><p>2500–4500</p></div>
-<div id="j8" class="job"><h2>🎨 Рангубор</h2><p>Рангубори хона</p><p>2500–4000</p></div>
-<div id="j9" class="job"><h2>🚿 Сантехник</h2><p>Об ва қубур</p><p>3000–6000</p></div>
-<div id="j10" class="job"><h2>🧹 Тозакун</h2><p>Тозакорӣ</p><p>2000–3500</p></div>
+<div id="j3" class="job"><h2>🧱 Усто</h2><p>Сохтмон</p></div>
+<div id="j4" class="job"><h2>🚗 Механик</h2><p>Мошин</p></div>
+<div id="j5" class="job"><h2>🔧 Слесарь</h2><p>Металл</p></div>
+<div id="j6" class="job"><h2>🏗 Крановщик</h2><p>Кран</p></div>
+<div id="j7" class="job"><h2>🎨 Рангубор</h2><p>Ранг</p></div>
+<div id="j8" class="job"><h2>🚿 Сантехник</h2><p>Об</p></div>
+<div id="j9" class="job"><h2>🪚 Челонгар</h2><p>Чуб</p></div>
+<div id="j10" class="job"><h2>🧹 Тозакун</h2><p>Тозакорӣ</p></div>
 
 <hr>
+
 <p>Соҳиби сайт: KasbTJ © 2026</p>
 
-<a href="https://t.me/kasb_tj"><button>Сабти ном</button></a>
+<a href="https://t.me/kasb_tj">
+<button>Сабти ном</button>
+</a>
 
 </div>
 
 <script>
+function toggle(){
+var x=document.getElementById("list");
+x.style.display = x.style.display==="block"?"none":"block";
+}
+
 function show(id){
 document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
 document.getElementById(id).classList.add('active');
