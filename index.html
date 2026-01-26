@@ -9,9 +9,8 @@ body{font-family:Arial;background:#f3f4f6;padding:15px}
 .card{background:white;padding:20px;border-radius:12px}
 .job{display:none}
 .job.active{display:block}
-button{background:#1e88e5;color:white;border:none;padding:8px 12px;border-radius:6px;margin:4px}
+button{background:#1e88e5;color:white;border:none;padding:8px 12px;border-radius:6px;margin:3px}
 nav{text-align:center;margin-bottom:10px}
-input{width:100%;padding:10px;margin:6px 0}
 </style>
 </head>
 
@@ -24,6 +23,10 @@ input{width:100%;padding:10px;margin:6px 0}
 <button onclick="show('j4')">🧱 Усто</button>
 <button onclick="show('j5')">🚗 Механик</button>
 <button onclick="show('j6')">🚛 Водитель</button>
+<button onclick="show('j7')">🎨 Рангубор</button>
+<button onclick="show('j8')">🪚 Дуредгар</button>
+<button onclick="show('j9')">📹 Камера</button>
+<button onclick="show('j10')">💻 Компютер</button>
 </nav>
 
 <div class="card">
@@ -40,16 +43,23 @@ input{width:100%;padding:10px;margin:6px 0}
 <hr>
 
 <div id="j1" class="job active"><h3>🚜 Погрузчик</h3><p>Маош: 3000–6000 сомонӣ</p></div>
-<div id="j2" class="job"><h3>⚡ Электрик</h3><p>Маош: 2500–5000 сомонӣ</p></div>
-<div id="j3" class="job"><h3>🚿 Сантехник</h3><p>Маош: 2500–4500 сомонӣ</p></div>
-<div id="j4" class="job"><h3>🧱 Усто</h3><p>Маош: 3000+</p></div>
-<div id="j5" class="job"><h3>🚗 Механик</h3><p>Маош: 3000+</p></div>
-<div id="j6" class="job"><h3>🚛 Водитель</h3><p>Маош: 3000+</p></div>
+<div id="j2" class="job"><h3>⚡ Электрик</h3><p>2500–5000 сомонӣ</p></div>
+<div id="j3" class="job"><h3>🚿 Сантехник</h3><p>2500–4500 сомонӣ</p></div>
+<div id="j4" class="job"><h3>🧱 Усто</h3><p>3000+</p></div>
+<div id="j5" class="job"><h3>🚗 Механик</h3><p>3000+</p></div>
+<div id="j6" class="job"><h3>🚛 Водитель</h3><p>3000+</p></div>
+<div id="j7" class="job"><h3>🎨 Рангубор</h3><p>2500+</p></div>
+<div id="j8" class="job"><h3>🪚 Дуредгар</h3><p>3000+</p></div>
+<div id="j9" class="job"><h3>📹 Камера</h3><p>3000+</p></div>
+<div id="j10" class="job"><h3>💻 Компютер</h3><p>2500+</p></div>
 
-<h3>📋 Сабти ном</h3>
-<input id="name" placeholder="Номат">
-<input id="phone" placeholder="Телефон">
-<button onclick="send()">Фиристодан</button>
+<br>
+
+<a href="https://t.me/kasb_tj" target="_blank">
+<button>Сабти ном</button>
+</a>
+
+<p>© KasbTJ 2026</p>
 
 </div>
 
@@ -58,12 +68,7 @@ function show(id){
 document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
-function send(){
-let n=name.value;
-let p=phone.value;
-window.open("https://t.me/kasb_tj?text=Ном:"+n+" Телефон:"+p);
-}
 </script>
 
 </body>
-</html>
+  </html>
