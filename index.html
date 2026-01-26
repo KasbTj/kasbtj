@@ -2,24 +2,51 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KasbTJ</title>
 
 <style>
-body{font-family:Arial;background:#f3f4f6;padding:15px}
-.card{background:white;padding:20px;border-radius:12px}
-.job{display:none}
-.job.active{display:block}
+body{
+font-family:Arial;
+background:#eef2f7;
+margin:0;
+padding:10px
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+max-width:500px;
+margin:auto
+}
+
+h1{text-align:center;color:#1e88e5}
 
 button{
+width:100%;
 background:#1e88e5;
 color:white;
 border:none;
-padding:10px 15px;
-border-radius:8px;
-margin:5px;
+padding:12px;
+border-radius:10px;
+margin:6px 0;
+font-size:16px
 }
 
-#list{display:none}
+.job{
+display:none;
+background:#f8f9fb;
+padding:12px;
+border-radius:10px;
+margin-top:10px
+}
+
+.job.active{display:block}
+
+small{color:#555}
+
 </style>
 </head>
 
@@ -28,62 +55,73 @@ margin:5px;
 <div class="card">
 
 <h1>KasbTJ</h1>
-<p>Омӯзиши касбҳои амалӣ</p>
+<center><small>Омӯзиши касбҳои амалӣ</small></center>
 
 <button onclick="toggle()">📋 Рӯйхати касбҳо</button>
 
-<div id="list">
+<div id="list" style="display:none">
 
 <button onclick="show('j1')">🚜 Погрузчик</button>
 <button onclick="show('j2')">⚡ Электрик</button>
 <button onclick="show('j3')">🧱 Усто</button>
 <button onclick="show('j4')">🚗 Механик</button>
-<button onclick="show('j5')">🔧 Слесарь</button>
-<button onclick="show('j6')">🏗 Крановщик</button>
-<button onclick="show('j7')">🎨 Рангубор</button>
-<button onclick="show('j8')">🚿 Сантехник</button>
-<button onclick="show('j9')">🪚 Челонгар</button>
+<button onclick="show('j5')">🚿 Сантехник</button>
+<button onclick="show('j6')">🎨 Рангубор</button>
+<button onclick="show('j7')">🔧 Слесарь</button>
+<button onclick="show('j8')">🪚 Челонгар</button>
+<button onclick="show('j9')">🏗 Крановщик</button>
 <button onclick="show('j10')">🧹 Тозакун</button>
 
 </div>
 
-<hr>
-
 <div id="j1" class="job active">
-<h2>🚜 Ронандаи погрузчик</h2>
-<p>Кор бо техникаи борбардор</p>
-<p>Маош: 3000–6000</p>
+<b>🚜 Погрузчик</b>
+<p>Кор бо техникаи борбардор.</p>
+Маош: 3000–6000
 </div>
 
 <div id="j2" class="job">
-<h2>⚡ Электрик</h2>
-<p>Сим, розетка, лампа</p>
-<p>Маош: 2500–5000</p>
+<b>⚡ Электрик</b>
+<p>Барқ ва шабака.</p>
+Маош: 2500–5000
 </div>
 
-<div id="j3" class="job"><h2>🧱 Усто</h2><p>Сохтмон</p></div>
-<div id="j4" class="job"><h2>🚗 Механик</h2><p>Мошин</p></div>
-<div id="j5" class="job"><h2>🔧 Слесарь</h2><p>Металл</p></div>
-<div id="j6" class="job"><h2>🏗 Крановщик</h2><p>Кран</p></div>
-<div id="j7" class="job"><h2>🎨 Рангубор</h2><p>Ранг</p></div>
-<div id="j8" class="job"><h2>🚿 Сантехник</h2><p>Об</p></div>
-<div id="j9" class="job"><h2>🪚 Челонгар</h2><p>Чуб</p></div>
-<div id="j10" class="job"><h2>🧹 Тозакун</h2><p>Тозакорӣ</p></div>
+<div id="j3" class="job"><b>🧱 Усто</b><p>Сохтмон.</p></div>
+<div id="j4" class="job"><b>🚗 Механик</b><p>Таъмири мошин.</p></div>
+<div id="j5" class="job"><b>🚿 Сантехник</b><p>Қубур.</p></div>
+<div id="j6" class="job"><b>🎨 Рангубор</b><p>Ранг.</p></div>
+<div id="j7" class="job"><b>🔧 Слесарь</b><p>Металл.</p></div>
+<div id="j8" class="job"><b>🪚 Челонгар</b><p>Чуб.</p></div>
+<div id="j9" class="job"><b>🏗 Крановщик</b><p>Кран.</p></div>
+<div id="j10" class="job"><b>🧹 Тозакун</b><p>Тозакорӣ.</p></div>
 
 <hr>
 
-<p>Соҳиби сайт: KasbTJ © 2026</p>
+<h3>👤 Дар бораи соҳиби сайт</h3>
+
+<p>
+KasbTJ — платформа барои ҷавонони Тоҷикистон.  
+Мақсад:Бояд донанд ки дар оянда кадом касбро интихоб кунанд.
+</p>
+
+<p>
+Соҳиб: <b>KasbTJ</b><br>
+📍 Тоҷикистон<br>
+📞 Telegram: @kasb_tj
+</p>
 
 <a href="https://t.me/kasb_tj">
-<button>Сабти ном</button>
+<button>📨 Тамос</button>
 </a>
+
+<p align="center">© KasbTJ 2026</p>
 
 </div>
 
 <script>
 function toggle(){
 var x=document.getElementById("list");
-x.style.display = x.style.display==="block"?"none":"block";
+x.style.display=x.style.display==="block"?"none":"block";
 }
 
 function show(id){
@@ -93,4 +131,4 @@ document.getElementById(id).classList.add('active');
 </script>
 
 </body>
-</html>
+  </html>
