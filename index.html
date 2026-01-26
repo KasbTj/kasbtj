@@ -5,91 +5,63 @@
 <title>KasbTJ</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f3f4f6;
-  padding: 15px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.job { display:none; }
-.job.active { display:block; }
-
-.job-btn{
-  padding:8px 12px;
-  margin:5px;
-  border:none;
-  background:#1e88e5;
-  color:white;
-  border-radius:6px;
-}
-
-nav {
-  background:#1e88e5;
-  padding:10px;
-  text-align:center;
-  border-radius:10px;
-  margin-bottom:15px;
-}
-
-nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-  font-weight:bold;
-}
+body{font-family:Arial;background:#f3f4f6;padding:15px}
+.card{background:white;padding:20px;border-radius:12px}
+.job{display:none}
+.job.active{display:block}
+button{background:#1e88e5;color:white;border:none;padding:8px 12px;border-radius:6px;margin:4px}
+nav{text-align:center;margin-bottom:10px}
+input{width:100%;padding:10px;margin:6px 0}
 </style>
 </head>
 
 <body>
 
 <nav>
-<button class="job-btn" onclick="showJob('loader')">🚜 Погрузчик</button>
-<button class="job-btn" onclick="showJob('electric')">⚡ Электрик</button>
-<a href="https://t.me/kasb_tj">Тамос</a>
+<button onclick="show('j1')">🚜 Погрузчик</button>
+<button onclick="show('j2')">⚡ Электрик</button>
+<button onclick="show('j3')">🚿 Сантехник</button>
+<button onclick="show('j4')">🧱 Усто</button>
+<button onclick="show('j5')">🚗 Механик</button>
+<button onclick="show('j6')">🚛 Водитель</button>
 </nav>
 
 <div class="card">
 
-<h1>KasbTJ</h1>
+<h2>KasbTJ</h2>
 <p>Омӯзиши касбҳои амалӣ</p>
 
-<div id="loader" class="job active">
-<h2>🚜 Ронандаи погрузчик</h2>
-<p>Идоракунии техникаи борбардор.</p>
-</div>
+<p>
+👤 Соҳиб: KasbTJ<br>
+📍 Тоҷикистон<br>
+📞 Telegram: @kasb_tj
+</p>
 
-<div id="electric" class="job">
-<h2>⚡ Электрик</h2>
+<hr>
 
-<p>Электрик бо шабакаҳои барқӣ кор мекунад.</p>
+<div id="j1" class="job active"><h3>🚜 Погрузчик</h3><p>Маош: 3000–6000 сомонӣ</p></div>
+<div id="j2" class="job"><h3>⚡ Электрик</h3><p>Маош: 2500–5000 сомонӣ</p></div>
+<div id="j3" class="job"><h3>🚿 Сантехник</h3><p>Маош: 2500–4500 сомонӣ</p></div>
+<div id="j4" class="job"><h3>🧱 Усто</h3><p>Маош: 3000+</p></div>
+<div id="j5" class="job"><h3>🚗 Механик</h3><p>Маош: 3000+</p></div>
+<div id="j6" class="job"><h3>🚛 Водитель</h3><p>Маош: 3000+</p></div>
 
-<h3>Вазифаҳо</h3>
-<ul>
-<li>Кашидани сим</li>
-<li>Монтажи розетка</li>
-<li>Таъмири барқ</li>
-</ul>
-
-<h3>Маош</h3>
-<p>2500–5000 сомонӣ</p>
-</div>
-
-<a href="https://t.me/kasb_tj">
-<button>Сабти ном</button>
-</a>
+<h3>📋 Сабти ном</h3>
+<input id="name" placeholder="Номат">
+<input id="phone" placeholder="Телефон">
+<button onclick="send()">Фиристодан</button>
 
 </div>
 
 <script>
-function showJob(id){
+function show(id){
 document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
 document.getElementById(id).classList.add('active');
+}
+function send(){
+let n=name.value;
+let p=phone.value;
+window.open("https://t.me/kasb_tj?text=Ном:"+n+" Телефон:"+p);
 }
 </script>
 
