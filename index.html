@@ -57,4 +57,41 @@ nav a{
 <div class="card">
 
 <h1>KasbTJ</h1>
-<p>Омӯзиши
+<p>Омӯзиши касбҳои амалӣ</p>
+
+<div id="loader" class="job active">
+<h2>🚜 Ронандаи погрузчик</h2>
+<p>Идоракунии техникаи борбардор.</p>
+</div>
+
+<div id="electric" class="job">
+<h2>⚡ Электрик</h2>
+
+<p>Электрик бо шабакаҳои барқӣ кор мекунад.</p>
+
+<h3>Вазифаҳо</h3>
+<ul>
+<li>Кашидани сим</li>
+<li>Монтажи розетка</li>
+<li>Таъмири барқ</li>
+</ul>
+
+<h3>Маош</h3>
+<p>2500–5000 сомонӣ</p>
+</div>
+
+<a href="https://t.me/kasb_tj">
+<button>Сабти ном</button>
+</a>
+
+</div>
+
+<script>
+function showJob(id){
+document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
