@@ -6,47 +6,15 @@
 <title>KasbTJ</title>
 
 <style>
-body{
-font-family:Arial;
-background:#eef2f7;
-margin:0;
-padding:10px
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.1);
-max-width:500px;
-margin:auto
-}
-
+body{font-family:Arial;background:#eef2f7;margin:0;padding:10px}
+.card{background:white;padding:15px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.1);max-width:650px;margin:auto}
 h1{text-align:center;color:#1e88e5}
-
-button{
-width:100%;
-background:#1e88e5;
-color:white;
-border:none;
-padding:12px;
-border-radius:10px;
-margin:6px 0;
-font-size:16px
-}
-
-.job{
-display:none;
-background:#f8f9fb;
-padding:12px;
-border-radius:10px;
-margin-top:10px
-}
-
+button{width:100%;background:#1e88e5;color:white;border:none;padding:12px;border-radius:10px;margin:6px 0;font-size:16px}
+.job{display:none;background:#f8f9fb;padding:12px;border-radius:10px;margin-top:10px}
 .job.active{display:block}
-
+img{width:100%;border-radius:10px;margin:8px 0}
 small{color:#555}
-
+ul{padding-left:18px}
 </style>
 </head>
 
@@ -55,7 +23,7 @@ small{color:#555}
 <div class="card">
 
 <h1>KasbTJ</h1>
-<center><small>Омӯзиши касбҳои амалӣ</small></center>
+<center><small>Барои интихоби касб барои мактаббачагон</small></center>
 
 <button onclick="toggle()">📋 Рӯйхати касбҳо</button>
 
@@ -63,9 +31,9 @@ small{color:#555}
 
 <button onclick="show('j1')">🚜 Погрузчик</button>
 <button onclick="show('j2')">⚡ Электрик</button>
-<button onclick="show('j3')">🧱 Усто</button>
+<button onclick="show('j3')">🚿 Сантехник</button>
 <button onclick="show('j4')">🚗 Механик</button>
-<button onclick="show('j5')">🚿 Сантехник</button>
+<button onclick="show('j5')">🧱 Усто</button>
 <button onclick="show('j6')">🎨 Рангубор</button>
 <button onclick="show('j7')">🔧 Слесарь</button>
 <button onclick="show('j8')">🪚 Челонгар</button>
@@ -74,47 +42,54 @@ small{color:#555}
 
 </div>
 
+<!-- 1 -->
 <div id="j1" class="job active">
-<b>🚜 Погрузчик</b>
-<p>Кор бо техникаи борбардор.</p>
-Маош: 3000–6000
+<h2>🚜 Ронандаи погрузчик</h2>
+<img src="https://images.unsplash.com/flagged/photo-1558991569-3a1a1f3c4d8d">
+<p><b>Чӣ кор мекунад?</b> Борҳоро мебардорад ва мекӯчонад.</p>
+<b>Меомӯзанд:</b>
+<ul><li>Рондани техника</li><li>Бехатарӣ</li></ul>
+<b>Маош:</b> 3000–6000 сомонӣ
 </div>
 
+<!-- 2 -->
 <div id="j2" class="job">
-<b>⚡ Электрик</b>
-<p>Барқ ва шабака.</p>
-Маош: 2500–5000
+<h2>⚡ Электрик</h2>
+<img src="https://images.unsplash.com/photo-1581092919530-7b4d7d3d7a2f">
+<p>Сим мекашад, чароғу розеткаро таъмир мекунад.</p>
+<b>Маош:</b> 2500–5000
 </div>
 
-<div id="j3" class="job"><b>🧱 Усто</b><p>Сохтмон.</p></div>
-<div id="j4" class="job"><b>🚗 Механик</b><p>Таъмири мошин.</p></div>
-<div id="j5" class="job"><b>🚿 Сантехник</b><p>Қубур.</p></div>
-<div id="j6" class="job"><b>🎨 Рангубор</b><p>Ранг.</p></div>
-<div id="j7" class="job"><b>🔧 Слесарь</b><p>Металл.</p></div>
-<div id="j8" class="job"><b>🪚 Челонгар</b><p>Чуб.</p></div>
-<div id="j9" class="job"><b>🏗 Крановщик</b><p>Кран.</p></div>
-<div id="j10" class="job"><b>🧹 Тозакун</b><p>Тозакорӣ.</p></div>
+<!-- 3 -->
+<div id="j3" class="job">
+<h2>🚿 Сантехник</h2>
+<img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
+<p>Қубур, об ва канализация.</p>
+<b>Маош:</b> 2500–4500
+</div>
+
+<!-- 4 -->
+<div id="j4" class="job">
+<h2>🚗 Механик</h2>
+<img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc">
+<p>Таъмири мошин.</p>
+<b>Маош:</b> 3000–6000
+</div>
+
+<!-- 5 -->
+<div id="j5" class="job"><h2>🧱 Усто</h2><p>Сохтмони хона.</p></div>
+<div id="j6" class="job"><h2>🎨 Рангубор</h2><p>Ранг кардани хона.</p></div>
+<div id="j7" class="job"><h2>🔧 Слесарь</h2><p>Металл.</p></div>
+<div id="j8" class="job"><h2>🪚 Челонгар</h2><p>Чубкорӣ.</p></div>
+<div id="j9" class="job"><h2>🏗 Крановщик</h2><p>Кран.</p></div>
+<div id="j10" class="job"><h2>🧹 Тозакун</h2><p>Тозакорӣ.</p></div>
 
 <hr>
 
-<h3>👤 Дар бораи соҳиби сайт</h3>
+<h3>Дар бораи сайт</h3>
+<p>KasbTJ барои кӯмак ба мактаббачагон сохта шудааст, то пеш аз интихоби роҳ дар зиндагӣ бо касбҳо шинос шаванд.</p>
 
-<p>
-KasbTJ — платформа барои ҷавонони Тоҷикистон.  
-Мақсад:Бояд донанд ки дар оянда кадом касбро интихоб кунанд.
-</p>
-
-<p>
-Соҳиб: <b>KasbTJ</b><br>
-📍 Тоҷикистон<br>
-📞 Telegram: @kasb_tj
-</p>
-
-<a href="https://t.me/kasb_tj">
-<button>📨 Тамос</button>
-</a>
-
-<p align="center">© KasbTJ 2026</p>
+<p>📍 Тоҷикистон<br>📞 Telegram: @kasb_tj</p>
 
 </div>
 
@@ -123,7 +98,6 @@ function toggle(){
 var x=document.getElementById("list");
 x.style.display=x.style.display==="block"?"none":"block";
 }
-
 function show(id){
 document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
 document.getElementById(id).classList.add('active');
