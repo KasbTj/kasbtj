@@ -10,10 +10,10 @@ body{font-family:Arial;background:#eef2f7;margin:0;padding:10px}
 .card{background:white;padding:15px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.1);max-width:650px;margin:auto}
 h1{text-align:center;color:#1e88e5}
 button{width:100%;background:#1e88e5;color:white;border:none;padding:12px;border-radius:10px;margin:6px 0;font-size:16px}
-.group{background:#dbeafe;color:#000}
+.test{background:#f1f5f9;padding:10px;border-radius:10px;margin-top:10px}
 .job{display:none;background:#f8f9fb;padding:12px;border-radius:10px;margin-top:10px}
 .job.active{display:block}
-small{color:#555}
+ul{padding-left:18px}
 </style>
 </head>
 
@@ -22,96 +22,65 @@ small{color:#555}
 <div class="card">
 
 <h1>KasbTJ</h1>
-<center><small>Интихоби касб барои мактаббачагон</small></center>
+<p align="center">Роҳнамо барои интихоби касб</p>
 
-<!-- Гурӯҳҳо -->
+<h3>🧠 Тест: кадом касб ба ту мувофиқ аст?</h3>
 
-<button class="group" onclick="toggle('g1')">🏗 Сохтмон ва таъмир</button>
-<div id="g1" style="display:none">
-<button onclick="show('j1')">🧱 Усто</button>
-<button onclick="show('j2')">🎨 Рангубор</button>
-<button onclick="show('j3')">🪚 Челонгар</button>
+<div class="test">
+<button onclick="add('tech')">Техника дӯст дорам</button>
+<button onclick="add('hand')">Бо даст кор кардан мехоҳам</button>
+<button onclick="add('logic')">Масъала ҳал кардан дӯст дорам</button>
+<button onclick="add('service')">Бо одамон кор кардан мехоҳам</button>
+
+<button onclick="result()">📊 Натиҷаро бин</button>
 </div>
 
-<button class="group" onclick="toggle('g2')">⚙ Техника ва мошин</button>
-<div id="g2" style="display:none">
-<button onclick="show('j4')">🚜 Погрузчик</button>
-<button onclick="show('j5')">🚗 Механик</button>
-<button onclick="show('j6')">🏗 Крановщик</button>
-</div>
-
-<button class="group" onclick="toggle('g3')">⚡ Барқ ва муҳандисӣ</button>
-<div id="g3" style="display:none">
-<button onclick="show('j7')">⚡ Электрик</button>
-<button onclick="show('j8')">🚿 Сантехник</button>
-</div>
-
-<button class="group" onclick="toggle('g4')">🧹 Хизматрасонӣ</button>
-<div id="g4" style="display:none">
-<button onclick="show('j9')">🧹 Тозакун</button>
-</div>
-
-<button class="group" onclick="toggle('g5')">💻 IT ва компютер</button>
-<div id="g5" style="display:none">
-<button onclick="show('j10')">💻 Устои компютер</button>
-</div>
-
-<button class="group" onclick="toggle('g6')">🎨 Эҷодӣ</button>
-<div id="g6" style="display:none">
-<button onclick="show('j11')">📸 Суратгир</button>
-</div>
-
-<button class="group" onclick="toggle('g7')">🍳 Хӯрокворӣ</button>
-<div id="g7" style="display:none">
-<button onclick="show('j12')">🍳 Ошпаз</button>
-</div>
-
-<button class="group" onclick="toggle('g8')">🏪 Савдо ва хизмат</button>
-<div id="g8" style="display:none">
-<button onclick="show('j13')">🛒 Фурӯшанда</button>
-</div>
+<div id="res" class="job"></div>
 
 <hr>
 
-<!-- Маълумоти касб -->
+<h3>🎓 Барои мактаббачагон</h3>
 
-<div id="j1" class="job active"><b>🧱 Усто</b><p>Сохтмони хона.</p></div>
-<div id="j2" class="job"><b>🎨 Рангубор</b><p>Ранг кардани девор.</p></div>
-<div id="j3" class="job"><b>🪚 Челонгар</b><p>Кор бо чуб.</p></div>
+<ul>
+<li>Аввал фикр кун: ту чиро дӯст медорӣ?</li>
+<li>Бо падару модар маслиҳат кун.</li>
+<li>Як касб интихоб кун ва маълумот ҷамъ кун.</li>
+<li>Дарсҳо ё устохона ҷустуҷӯ намо.</li>
+<li>Ҳеҷ гоҳ аз омӯзиш наист!</li>
+</ul>
 
-<div id="j4" class="job"><b>🚜 Погрузчик</b><p>Борбардорӣ.</p></div>
-<div id="j5" class="job"><b>🚗 Механик</b><p>Таъмири мошин.</p></div>
-<div id="j6" class="job"><b>🏗 Крановщик</b><p>Идоракунии кран.</p></div>
-
-<div id="j7" class="job"><b>⚡ Электрик</b><p>Сим ва барқ.</p></div>
-<div id="j8" class="job"><b>🚿 Сантехник</b><p>Қубур.</p></div>
-
-<div id="j9" class="job"><b>🧹 Тозакун</b><p>Тозакорӣ.</p></div>
-
-<div id="j10" class="job"><b>💻 Устои компютер</b><p>Компютер.</p></div>
-<div id="j11" class="job"><b>📸 Суратгир</b><p>Акс.</p></div>
-
-<div id="j12" class="job"><b>🍳 Ошпаз</b><p>Пухтупаз.</p></div>
-
-<div id="j13" class="job"><b>🛒 Фурӯшанда</b><p>Савдо.</p></div>
+<p><b>Маслиҳат:</b> касбро бо дили худ интихоб кун, на бо маҷбурӣ.</p>
 
 <hr>
 
-<p align="center">© KasbTJ 2026</p>
+<h3>📍 Дар бораи сайт</h3>
+<p>
+KasbTJ барои кӯмак ба мактаббачагон сохта шудааст, то онҳо пеш аз интихоби роҳ дар зиндагӣ
+бо касбҳо шинос шаванд.
+</p>
+
+<p>Telegram: @kasb_tj</p>
 
 </div>
 
 <script>
-function toggle(id){
-var x=document.getElementById(id);
-x.style.display=x.style.display==="block"?"none":"block";
-}
+let score={tech:0,hand:0,logic:0,service:0};
 
-function show(id){
-document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
-document.getElementById(id).classList.add('active');
+function add(t){score[t]++;}
+
+function result(){
+let max=Object.keys(score).reduce((a,b)=>score[a]>score[b]?a:b);
+let text="";
+
+if(max=="tech") text="🚜 Ба ту касбҳои техникӣ мувофиқанд (погрузчик, механик).";
+if(max=="hand") text="🧱 Ба ту касбҳои бо даст мувофиқанд (усто, рангубор).";
+if(max=="logic") text="⚡ Ба ту касбҳои дақиқ мувофиқанд (электрик, сантехник).";
+if(max=="service") text="🧹 Ба ту хизматрасонӣ мувофиқ аст.";
+
+document.getElementById("res").classList.add("active");
+document.getElementById("res").innerHTML="<h3>Натиҷа:</h3><p>"+text+"</p>";
 }
 </script>
 
 </body>
-  </html>
+</html>
