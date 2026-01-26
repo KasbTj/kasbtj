@@ -47,10 +47,6 @@ button {
   padding: 10px 15px;
   border-radius: 8px;
 }
-</style>
-</head>
-<body> 
-  <nav>
 <a href="#home">Асосӣ</a>
 <a href="#jobs">Касбҳо</a>
 <a href="https://t.me/kasb_tj">Тамос</a>
@@ -60,9 +56,12 @@ button {
 <h1 id="home">KasbTJ</h1>
 <p>Омӯзиши касбҳои амалӣ</p>
 
-<h2 id="jobs">🚜 Ронандаи погрузчик
-  <h2>⚡ Электрик</h2>
+<div id="loader" class="job active">
+<h2 id="jobs">🚜 Ронандаи погрузчик</h2>
+</div>
 
+<div id="electric" class="job">
+<h2>⚡ Электрик</h2>
 <p>
 Электрик бо шабакаҳои барқӣ, таҷҳизоти равшанӣ ва таъмини қувва кор мекунад.
 </p>
@@ -87,10 +86,17 @@ button {
 <li>Борбардорӣ</li>
 <li>Хизматрасонӣ</li>
 </ul>
+</div>
 <a href="https://t.me/kasb_tj" target="_blank">
   <button>Сабти ном</button>
 </a>
 <p>© KasbTJ 2026</p>
 </div>
+    <script>
+function showJob(id){
+document.querySelectorAll('.job').forEach(j=>j.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
 </body>
   </html>
