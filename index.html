@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="tg">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Роҳи Касб</title>
 
 <style>
-body{font-family:Arial;background:#f2f2f2;margin:0;padding:10px}
+body{font-family:sans-serif;margin:10px;background:#f2f2f2}
+button{width:100%;padding:12px;margin:4px 0;border:0;border-radius:8px;background:#2196f3;color:#fff;font-size:16px}
+.content{display:none;background:#fff;padding:10px;border-radius:10px}
+.job{margin-bottom:15px}
+ul{padding-left:18px}
 h1{text-align:center}
-.menu button{
-width:100%;
-padding:12px;
-margin:4px 0;
-border:none;
-background:#2196F3;
-color:white;
-font-size:16px;
-border-radius:8px
-}
-.group{display:none}
-.job{
-background:white;
-padding:10px;
-margin:8px 0;
-border-radius:8px
-}
 </style>
+
+<script>
+function show(id){
+document.querySelectorAll('.content').forEach(x=>x.style.display="none");
+document.getElementById(id).style.display="block";
+}
+</script>
 </head>
 
 <body>
@@ -32,151 +27,86 @@ border-radius:8px
 <h1>🧭 Роҳи Касб</h1>
 <p align="center">Роҳнамо барои интихоби касб</p>
 
-<div class="menu">
-<button onclick="show('tib')">🩺 ТИБ</button>
+<button onclick="show('tib')">🏥 ТИБ</button>
 <button onclick="show('tech')">🛠 ТЕХНИКӢ</button>
 <button onclick="show('it')">💻 IT</button>
 <button onclick="show('build')">🏗 СОХТМОН</button>
 <button onclick="show('farm')">🌾 КИШОВАРЗӢ</button>
 <button onclick="show('art')">🎨 ЭҶОДӢ</button>
-<button onclick="show('safe')">👮 АМНИЯТ</button>
+<button onclick="show('safe')">🛡 АМНИЯТ</button>
 <button onclick="show('edu')">📚 МАОРИФ</button>
+
+<!-- ТИБ -->
+<div id="tib" class="content">
+<div class="job"><b>Духтур</b><p>Беморонро ташхис ва табобат мекунад.</p>
+<ul><li>Биология – бадани инсон</li><li>Химия – доруҳо</li><li>Физика – таҷҳизот</li></ul></div>
+
+<div class="job"><b>Ҳамшира</b><p>Ба беморон нигоҳубин мекунад.</p>
+<ul><li>Биология – нигоҳубин</li><li>Технология – асбобҳо</li></ul></div>
 </div>
 
-<hr>
+<!-- ТЕХНИКӢ -->
+<div id="tech" class="content">
+<div class="job"><b>Механик</b><p>Мошин ва техника таъмир мекунад.</p>
+<ul><li>Физика – ҳаракат</li><li>Технология – механизм</li></ul></div>
 
-<div id="tib" class="group">
-
-<div class="job">
-<b>Духтур</b>
-<p>Беморонро ташхис ва табобат мекунад.</p>
-<ul>
-<li>Биология – бадани инсон</li>
-<li>Химия – доруҳо</li>
-<li>Физика – таҷҳизот</li>
-</ul>
+<div class="job"><b>Ронандаи боркаш</b><p>Молро ба шаҳрҳои дигар мерасонад.</p>
+<ul><li>География – роҳҳо</li><li>Қоидаи роҳ</li></ul></div>
 </div>
 
-<div class="job">
-<b>Ҳамшира</b>
-<p>Ба беморон нигоҳубин мекунад.</p>
-<ul>
-<li>Биология – нигоҳубин</li>
-<li>Технология – асбобҳо</li>
-</ul>
+<!-- IT -->
+<div id="it" class="content">
+<div class="job"><b>Барномасоз</b><p>Барнома ва сайт месозад.</p>
+<ul><li>Математика – алгоритм</li><li>Информатика – компютер</li><li>Англисӣ – код</li></ul></div>
+
+<div class="job"><b>Дизайнери графикӣ</b><p>Намуди сайт ва реклама месозад.</p>
+<ul><li>Расм</li><li>Компютер</li></ul></div>
 </div>
 
+<!-- СОХТМОН -->
+<div id="build" class="content">
+<div class="job"><b>Бинокор</b><p>Хона ва бино месозад.</p>
+<ul><li>Математика – андоза</li><li>Физика – устуворӣ</li></ul></div>
+
+<div class="job"><b>Кранчӣ</b><p>Бо кран бор мебардорад.</p>
+<ul><li>Физика</li><li>Технология</li></ul></div>
 </div>
 
-<div id="tech" class="group">
+<!-- КИШОВАРЗӢ -->
+<div id="farm" class="content">
+<div class="job"><b>Деҳқон</b><p>Маҳсулот парвариш мекунад.</p>
+<ul><li>Биология</li><li>География</li></ul></div>
 
-<div class="job">
-<b>Электрик</b>
-<p>Шабакаҳои барқ месозад.</p>
-<ul>
-<li>Физика – ҷараён</li>
-<li>Математика – ҳисоб</li>
-<li>Технология – симкашӣ</li>
-</ul>
+<div class="job"><b>Чорводор</b><p>Ҳайвонот нигоҳубин мекунад.</p>
+<ul><li>Биология</li></ul></div>
 </div>
 
-<div class="job">
-<b>Механик</b>
-<p>Мошинҳоро таъмир мекунад.</p>
-<ul>
-<li>Физика – ҳаракат</li>
-<li>Технология – қисмҳо</li>
-</ul>
+<!-- ЭҶОДӢ -->
+<div id="art" class="content">
+<div class="job"><b>Сароянда</b><p>Суруд мехонад.</p>
+<ul><li>Мусиқӣ</li></ul></div>
+
+<div class="job"><b>Рассом</b><p>Расм мекашад.</p>
+<ul><li>Расм</li></ul></div>
 </div>
 
+<!-- АМНИЯТ -->
+<div id="safe" class="content">
+<div class="job"><b>Полис</b><p>Тартибот нигоҳ медорад.</p>
+<ul><li>Қонун</li><li>Чисмонӣ</li></ul></div>
+
+<div class="job"><b>Сарбоз</b><p>Ватан муҳофизат мекунад.</p>
+<ul><li>Тайёрии ҷисмонӣ</li></ul></div>
 </div>
 
-<div id="it" class="group">
+<!-- МАОРИФ -->
+<div id="edu" class="content">
+<div class="job"><b>Омӯзгор</b><p>Ба хонандагон дониш медиҳад.</p>
+<ul><li>Фанни худ</li><li>Психология</li></ul></div>
 
-<div class="job">
-<b>Барномасоз</b>
-<p>Барнома ва сайт месозад.</p>
-<ul>
-<li>Математика – алгоритм</li>
-<li>Информатика – компютер</li>
-<li>Англисӣ – код</li>
-</ul>
+<div class="job"><b>Тарбиятгар</b><p>Бо кӯдакон кор мекунад.</p>
+<ul><li>Педагогика</li></ul></div>
 </div>
-
-</div>
-
-<div id="build" class="group">
-
-<div class="job">
-<b>Бинокор</b>
-<p>Бино месозад.</p>
-<ul>
-<li>Математика – андоза</li>
-<li>Физика – устуворӣ</li>
-<li>Технология – сохтмон</li>
-</ul>
-</div>
-
-</div>
-
-<div id="farm" class="group">
-
-<div class="job">
-<b>Деҳқон</b>
-<p>Маҳсулот парвариш мекунад.</p>
-<ul>
-<li>Биология – растанӣ</li>
-<li>География – замин</li>
-</ul>
-</div>
-
-</div>
-
-<div id="art" class="group">
-
-<div class="job">
-<b>Дизайнер</b>
-<p>Намуди зоҳирӣ месозад.</p>
-<ul>
-<li>Расм</li>
-<li>Компютер</li>
-</ul>
-</div>
-
-</div>
-
-<div id="safe" class="group">
-
-<div class="job">
-<b>Полис</b>
-<p>Тартиботро нигоҳ медорад.</p>
-<ul>
-<li>Қонун</li>
-<li>Чисмонӣ</li>
-</ul>
-</div>
-
-</div>
-
-<div id="edu" class="group">
-
-<div class="job">
-<b>Омӯзгор</b>
-<p>Ба хонандагон дониш медиҳад.</p>
-<ul>
-<li>Фанни худ</li>
-<li>Психология</li>
-</ul>
-</div>
-
-</div>
-
-<script>
-function show(id){
-document.querySelectorAll('.group').forEach(e=>e.style.display="none");
-document.getElementById(id).style.display="block";
-}
-</script>
 
 </body>
   </html>
