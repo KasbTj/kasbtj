@@ -1,104 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="tg">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KasbTJ</title>
+
+<title>RohiKasb.tj</title>
 
 <style>
-body{font-family:Arial;background:#eef2f7;margin:0;padding:10px}
-.card{background:white;padding:15px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.1);max-width:650px;margin:auto}
-h1{text-align:center;color:#1e88e5}
-button{width:100%;background:#1e88e5;color:white;border:none;padding:12px;border-radius:10px;margin:6px 0;font-size:16px}
-.test{background:#f1f5f9;padding:10px;border-radius:10px;margin-top:10px}
-.job{display:none;background:#f8f9fb;padding:12px;border-radius:10px;margin-top:10px}
-.job.active{display:block}
+body{
+font-family:Arial;
+background:#eef2f7;
+margin:0;
+padding:10px;
+}
+
+.card{
+background:white;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+h2{color:#1976d2}
+
+.badge{
+background:#1976d2;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+display:inline-block;
+margin-bottom:8px;
+}
+
 ul{padding-left:18px}
 </style>
 </head>
 
 <body>
 
-<div class="card">
-
-<h1>KasbTJ</h1>
+<h1 align="center">RohiKasb.tj</h1>
 <p align="center">Роҳнамо барои интихоби касб</p>
 
-<h3>🧠 Тест: кадом касб ба ту мувофиқ аст?</h3>
+<!-- Электрик -->
+<div class="card">
+<span class="badge">⚡ Электрик</span>
 
-<div class="test">
-<button onclick="add('tech')">Техника дӯст дорам</button>
-<button onclick="add('hand')">Бо даст кор кардан мехоҳам</button>
-<button onclick="add('logic')">Масъала ҳал кардан дӯст дорам</button>
-<button onclick="add('service')">Бо одамон кор кардан мехоҳам</button>
-
-<button onclick="result()">📊 Натиҷаро бин</button>
-</div>
-<hr>
-
-<h3>📋 Рӯйхати касбҳо</h3>
-
-<a href="jobs/pogruzchik.html">
-<button>🚜 Ронандаи погрузчик</button>
-</a>
-
-<a href="jobs/electric.html">
-<button>⚡ Электрик</button>
-</a>
-
-<a href="jobs/mechanic.html">
-<button>🔧 Механик</button>
-</a>
-
-<a href="jobs/builder.html">
-<button>👷 Бинокор</button>
-</a>
-<div id="res" class="job"></div>
-
-<hr>
-
-<h3>🎓 Барои мактаббачагон</h3>
-
-<ul>
-<li>Аввал фикр кун: ту чиро дӯст медорӣ?</li>
-<li>Бо падару модар маслиҳат кун.</li>
-<li>Як касб интихоб кун ва маълумот ҷамъ кун.</li>
-<li>Дарсҳо ё устохона ҷустуҷӯ намо.</li>
-<li>Ҳеҷ гоҳ аз омӯзиш наист!</li>
-</ul>
-
-<p><b>Маслиҳат:</b> касбро бо дили худ интихоб кун, на бо маҷбурӣ.</p>
-
-<hr>
-
-<h3>📍 Дар бораи сайт</h3>
 <p>
-KasbTJ барои кӯмак ба мактаббачагон сохта шудааст, то онҳо пеш аз интихоби роҳ дар зиндагӣ
-бо касбҳо шинос шаванд.
+Электрик мутахассисест, ки шабакаҳои барқиро насб, таъмир ва нигоҳубин мекунад. Ӯ дар хонаҳо, мактабҳо, заводҳо ва сохтмонгоҳҳо кор мекунад. Ин касб диққат ва риояи қоидаҳои бехатариро талаб мекунад.
 </p>
 
-<p>Telegram: @kasb_tj</p>
-
+<b>📚 Фанҳо:</b>
+<ul>
+<li><b>Физика</b> – фаҳмидани ҷараёни барқ</li>
+<li><b>Математика</b> – ҳисобҳо</li>
+<li><b>Технологияи меҳнат</b> – симкашӣ</li>
+</ul>
 </div>
 
-<script>
-let score={tech:0,hand:0,logic:0,service:0};
+<!-- Барномасоз -->
+<div class="card">
+<span class="badge">💻 Барномасоз</span>
 
-function add(t){score[t]++;}
+<p>
+Барномасоз барнома, сайт ва замима месозад. Ӯ масъалаҳоро бо код ҳал мекунад ва метавонад аз хона ҳам кор кунад. Ин касб талаботи баланд дорад.
+</p>
 
-function result(){
-let max=Object.keys(score).reduce((a,b)=>score[a]>score[b]?a:b);
-let text="";
+<b>📚 Фанҳо:</b>
+<ul>
+<li><b>Математика</b> – алгоритм</li>
+<li><b>Информатика</b> – компютер</li>
+<li><b>IT</b> – барномасозӣ</li>
+<li><b>Англисӣ</b> – хондани код</li>
+</ul>
+</div>
 
-if(max=="tech") text="🚜 Ба ту касбҳои техникӣ мувофиқанд (погрузчик, механик).";
-if(max=="hand") text="🧱 Ба ту касбҳои бо даст мувофиқанд (усто, рангубор).";
-if(max=="logic") text="⚡ Ба ту касбҳои дақиқ мувофиқанд (электрик, сантехник).";
-if(max=="service") text="🧹 Ба ту хизматрасонӣ мувофиқ аст.";
+<!-- Бинокор -->
+<div class="card">
+<span class="badge">👷 Бинокор</span>
 
-document.getElementById("res").classList.add("active");
-document.getElementById("res").innerHTML="<h3>Натиҷа:</h3><p>"+text+"</p>";
-}
-</script>
+<p>
+Бинокор хона ва бино месозад. Бо бетон, хишт ва асбобҳои сохтмон кор мекунад. Қувва ва сабр талаб мекунад.
+</p>
 
-</body>
-</html>
+<b>📚 Фанҳо:</b>
+<ul>
+<li><b>Математика</b> – андоза</li>
+<li><b>Физика</b> – устуворӣ</
